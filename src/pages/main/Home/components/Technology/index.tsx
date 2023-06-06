@@ -1,4 +1,3 @@
-import React from 'react'
 import classNames from 'classnames/bind'
 import { Slide } from 'react-slideshow-image'
 import 'react-slideshow-image/dist/styles.css'
@@ -7,14 +6,6 @@ import styles from './Technology.module.scss'
 import { View } from '@/components/shared'
 
 const cx = classNames.bind(styles)
-
-const divStyle = {
-  display: 'flex',
-  alignItems: 'center',
-  justifyContent: 'center',
-  backgroundSize: 'cover',
-  height: '50vh'
-}
 
 const slideImages = [
   {

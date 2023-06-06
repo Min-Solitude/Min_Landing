@@ -1,5 +1,4 @@
 import { IService } from '@/types/Service'
-import React from 'react'
 import classNames from 'classnames/bind'
 
 import styles from './itemService.module.scss'

@@ -1,10 +1,8 @@
-import React from 'react'
 import classNames from 'classnames/bind'
 
 import styles from './Language.module.scss'
 import { View } from '@/components/shared'
 import ItemLanguage from '@/components/custom/itemLanguage'
-import { title } from 'process'
 
 const cx = classNames.bind(styles)
 

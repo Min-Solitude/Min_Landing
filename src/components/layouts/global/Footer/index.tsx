@@ -1,4 +1,3 @@
-import React from 'react'
 import classNames from 'classnames/bind'
 
 import styles from './Footer.module.scss'
@@ -36,7 +35,7 @@ const Footer = () => {
           </View>
         </View>
         <View className={cx('wrapper__footer__inner__create')}>
-          <p>Copyright © 2023 Lavenes. All rights reserved.</p>
+          <p>Copyright © 2023 Mev. All rights reserved.</p>
           <p>VN</p>
         </View>
       </View>
