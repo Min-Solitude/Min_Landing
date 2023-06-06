@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Darumadrop+One&family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-white);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, var(--color-primary), var(--color-secondary));
+  border-radius: 10px;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1rem;
+}
+
+a {
+  color: var(--color-black);
+}
+
+input {
+  font-size: 1rem;
+  font-family: 'Open Sans', sans-serif;
+  outline: none;
+}
+
+button {
+  font-size: 1rem;
+  font-family: 'Open Sans', sans-serif;
+  border: none;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  ::-webkit-scrollbar {
+    width: 0rem;
+  }
+}

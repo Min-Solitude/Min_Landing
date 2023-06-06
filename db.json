@@ -1,0 +1,20 @@
+{
+  "accounts": [
+    {
+      "email": "nga@gmail.com",
+      "password": "$2a$10$uWIengolxGrw8kxaoz1ZI.h4l2JjvC3VLMhFgW/rtq86lZ.U.H8fG",
+      "fullName": "ngângnaga",
+      "role": "user",
+      "status": true,
+      "id": 1
+    },
+    {
+      "email": "nga1@gmail.com",
+      "password": "$2a$10$pTbiKqhLD7LalmnsvtTAheYdsO.14wnpd3vQ78cMmElcUmb1zB6Cm",
+      "fullName": "benga",
+      "role": "user",
+      "status": true,
+      "id": 4
+    }
+  ]
+}

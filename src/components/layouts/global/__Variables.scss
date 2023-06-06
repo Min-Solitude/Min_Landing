@@ -1,0 +1,23 @@
+:root {
+  // COLORS
+  --color-theme-primary: #007aff;
+  --color-theme-secondary: #e869d7;
+
+  --color-primary: #a9c9ff;
+  --color-secondary: #ffbbec;
+
+  --color-white: #fff;
+  --color-black: #181818;
+
+  // TRANSITIONS
+  --transition-primary: 0.25s;
+
+  // FILTERS
+  --filter-blur: blur(35rem);
+
+  // BOX SHADOWS
+  --box-shadow-primary: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  --tw-ring-offset-shadow: 0 0 transparent;
+  --tw-ring-shadow: 0 0 transparent;
+  --tw-shadow: 5px 5px 10px rgba(108, 106, 213, 0.25), inset 2px 2px 6px #007aff, inset -5px -5px 10px #a9c9ff;
+}

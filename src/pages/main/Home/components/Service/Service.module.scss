@@ -1,0 +1,19 @@
+.wrapper__service {
+  display: flex;
+  justify-content: center;
+  &__inner {
+    width: 60%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+    gap: 2rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .wrapper__service {
+    &__inner {
+      width: 90%;
+      gap: 1rem;
+    }
+  }
+}

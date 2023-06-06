@@ -1,0 +1,31 @@
+.wrapper__item-language {
+  min-height: 20rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  gap: 1rem;
+  &__image {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 0.5rem;
+    background-color: pink;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  h2 {
+    font-size: 1.2rem;
+  }
+  p {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #777;
+  }
+}

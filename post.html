@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <button>post</button>
+  <script>
+    const data = {
+      "title": "Nev confession",
+    "image": "https://i.pinimg.com/564x/cc/f6/f8/ccf6f82cd0da0424f5a5446986db2696.jpg",
+    "description": "Nev confession đăng những tâm tư, suy nghĩ của bạn dưới hình thức ẩn danh",
+    "id": "4",
+      "link": "https://app.lofi.co/"
+    }
+
+const button = document.querySelector('button')
+button.addEventListener('click', () => {
+  fetch('https://647c4cafc0bae2880ad08ac3.mockapi.io/Service', {
+    method: 'POST',
+    body: JSON.stringify(data),
+    headers: {
+      'Content-type': 'application/json; charset=UTF-8',
+    },
+  })
+    .then((response) => {
+      response.json()
+      alert('Đã thêm thành công')
+    })
+    .then((json) => console.log(json))
+})
+  </script>
+</body>
+</html>

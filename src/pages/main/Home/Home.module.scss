@@ -1,0 +1,11 @@
+.wrapper__home {
+  display: flex;
+  gap: 4rem;
+  flex-direction: column;
+}
+
+@media screen and (max-width: 768px) {
+  .wrapper__home {
+    gap: 2rem;
+  }
+}
