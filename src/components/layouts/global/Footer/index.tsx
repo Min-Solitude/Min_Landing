@@ -7,7 +7,7 @@ const cx = classNames.bind(styles)
 
 const Footer = () => {
   return (
-    <View className={cx('wrapper__footer')}>
+    <View className={cx('wrapper__footer')} id='contact'>
       <View className={cx('wrapper__footer__inner')}>
         <View className={cx('wrapper__footer__inner__title')}>Follow us</View>
         <View className={cx('wrapper__footer__inner__content')}>

@@ -19,7 +19,7 @@ const Service = () => {
   }, [])
 
   return (
-    <View className={cx('wrapper__service')}>
+    <View className={cx('wrapper__service')} id='service'>
       <View className={cx('wrapper__service__inner')}>
         {service?.map((item: IService) => (
           <ItemService key={item.id} {...item} />

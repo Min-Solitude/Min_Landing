@@ -4,13 +4,14 @@ import { routes } from './config'
 import classNames from 'classnames/bind'
 
 import style from './App.module.scss'
+import Loading from './components/shared/Loading'
 
 const cx = classNames.bind(style)
 
 function App() {
   return (
     <div className={cx('App')}>
-      <React.Suspense fallback={<div>Loading...</div>}>
+      <React.Suspense fallback={<Loading />}>
         <BrowserRouter>
           <Routes>
             {routes.map((route) => {
