@@ -39,7 +39,7 @@ const Header = () => {
   return (
     <View className={cx('wrapper__header', headerActive && 'wrapper__header--active')}>
       <View className={cx('wrapper__header__inner')}>
-        <View className={cx('wrapper__header__inner__logo')}>Nevsolit</View>
+        <View className={cx('wrapper__header__inner__logo')}>Nev</View>
         <button className={cx('wrapper__header__inner__drop-down')} onClick={() => setIsShowMenu(!isShowMenu)}>
           <IonIcon name='menu' className={cx('wrapper__header__inner__drop-down__icon')} />
         </button>

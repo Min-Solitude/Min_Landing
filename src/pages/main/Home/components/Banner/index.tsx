@@ -14,7 +14,7 @@ const Banner = () => {
         <View className={cx('wrapper__banner__inner__content')}>
           <View className={cx('wrapper__banner__inner__content__detail')}>
             <h1>
-              Welcome to <span>nevsolit</span>
+              Welcome to <span>nev</span>
             </h1>
             <p>Web Developer & Content Creater</p>
             <motion.button whileTap={{ scale: 0.9 }}>Dịch vụ</motion.button>
