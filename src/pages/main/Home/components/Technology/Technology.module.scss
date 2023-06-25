@@ -1,51 +1,37 @@
 .wrapper__teachnology {
-  margin-top: 2rem;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 4rem;
   &__title {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    gap: 2rem;
+    text-align: center;
     h1 {
-      text-transform: uppercase;
       font-size: 2.5rem;
-      span {
-        background: -webkit-linear-gradient(var(--color-primary), var(--color-secondary));
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-      }
+      margin-bottom: 1rem;
+    }
+    p {
+      max-width: 30rem;
+      font-size: 0.9rem;
+      color: silver;
     }
   }
-  &__inner {
-    width: 60%;
-    background-color: yellow;
-    border-radius: 0.5rem;
-    overflow: hidden;
-    &__image {
-      background-color: rgb(240, 240, 240);
-      height: 100%;
-      height: 55vh;
-    }
-  }
-}
-
-.wrapper__teachnology__inner__image {
-  cursor: pointer;
-  img {
+  &__content {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
   }
 }
 
 @media screen and (max-width: 768px) {
   .wrapper__teachnology {
-    &__inner {
-      width: 90%;
+    gap: 2rem;
+    justify-content: center;
+    &__title {
+      h1 {
+        font-size: 2rem;
+      }
+      p {
+        max-width: 25rem;
+      }
     }
   }
 }

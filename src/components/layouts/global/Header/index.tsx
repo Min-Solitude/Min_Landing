@@ -1,63 +1,64 @@
 import classNames from 'classnames/bind'
 import { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
+import { Link } from 'react-router-dom'
+import IonIcon from '@reacticons/ionicons'
 
 import style from './Header.module.scss'
 import { View } from '@/components/shared'
-import IonIcon from '@reacticons/ionicons'
+import Toast from '@/components/custom/toast'
 
 const cx = classNames.bind(style)
 
-const variants = {
-  visible: { opacity: 1, x: 0 },
-  mobile: { opacity: 1, x: 100 },
-  website: { opacity: 0, x: 0 }
-}
-
 const Header = () => {
-  const [isShowMenu, setIsShowMenu] = useState(true)
-  const [isMobileMotionActive, setIsMobileMotionActive] = useState(false)
-  const [headerActive, setHeaderActive] = useState(false)
-  const [valueScroll, setValueScroll] = useState(0)
+  const [isActiveList, setIsActiveList] = useState([true, false, false, false, false])
+  const [isMobile, setIsMobile] = useState(false)
 
-  window.addEventListener('scroll', () => {
-    setValueScroll(window.scrollY)
-  })
+  const handleClick = (index: any) => {
+    setIsActiveList(isActiveList.map((item, i) => i === index))
+  }
 
   useEffect(() => {
-    if (window.innerWidth < 768) {
-      setIsShowMenu(false)
-      setIsMobileMotionActive(true)
+    const handleResize = () => {
+      if (window.innerWidth < 768) {
+        setIsMobile(true)
+      } else {
+        setIsMobile(false)
+      }
     }
-    if (window.scrollY > 10) {
-      setHeaderActive(true)
-    } else {
-      setHeaderActive(false)
-    }
-  }, [valueScroll])
+    handleResize()
+    window.addEventListener('resize', handleResize)
+    return () => window.removeEventListener('resize', handleResize)
+  }, [])
 
   return (
-    <View className={cx('wrapper__header', headerActive && 'wrapper__header--active')}>
+    <View className={cx('wrapper__header')}>
       <View className={cx('wrapper__header__inner')}>
-        <View className={cx('wrapper__header__inner__logo')}>Nev</View>
-        <button className={cx('wrapper__header__inner__drop-down')} onClick={() => setIsShowMenu(!isShowMenu)}>
-          <IonIcon name='menu' className={cx('wrapper__header__inner__drop-down__icon')} />
-        </button>
-        {isShowMenu && (
-          <motion.nav
-            className={cx('wrapper__header__inner__nav-bar')}
-            variants={variants}
-            initial={isMobileMotionActive ? 'mobile' : 'website'}
-            animate='visible'
-            transition={{ duration: 0.5 }}
-          >
-            <a href='#about'>Giới thiệu</a>
-            <a href='#service'>Dịch vụ</a>
-            <a href='#blog'>Blog</a>
-            <a href='#technology'>Công nghệ</a>
-            <a href='#contact'>Liên kết</a>
-          </motion.nav>
-        )}
+        <View className={cx('wrapper__header__inner__logo')}>Nevsolit</View>
+
+        <motion.nav className={cx('wrapper__header__inner__nav-bar')}>
+          <a href='#home' className={isActiveList[0] ? cx('active') : ''} onClick={() => handleClick(0)}>
+            {isMobile ? <IonIcon name='home' /> : <span>Trang chủ</span>}
+          </a>
+          <a href='#about' className={isActiveList[2] ? cx('active') : ''} onClick={() => handleClick(2)}>
+            {isMobile ? <IonIcon name='newspaper' /> : <span>Giới thiệu</span>}
+          </a>
+          <a href='#service' className={isActiveList[1] ? cx('active') : ''} onClick={() => handleClick(1)}>
+            {isMobile ? <IonIcon name='construct' /> : <span>Dịch vụ</span>}
+          </a>
+          <a href='#technology' className={isActiveList[3] ? cx('active') : ''} onClick={() => handleClick(3)}>
+            {isMobile ? <IonIcon name='code-slash' /> : <span>Công nghệ</span>}
+          </a>
+        </motion.nav>
+        <Link
+          to='#'
+          className={cx('wrapper__header__inner__button')}
+          onClick={() => {
+            Toast('Đang phát triển').warning()
+          }}
+        >
+          Liên kết
+        </Link>
       </View>
     </View>
   )

@@ -1,136 +1,65 @@
 .wrapper__banner {
-  width: 100%;
-  height: 100vh;
-  position: relative;
-  // &::before {
-  //   content: '';
-  //   position: absolute;
-  //   width: 30%;
-  //   height: 30%;
-  //   border-radius: 50%;
-  //   background-color: var(--color-theme-primary);
-  //   z-index: 1;
-  //   right: 30%;
-  //   top: 50%;
-  //   transform: translate(50%, -50%);
-  // }
-  // &::after {
-  //   content: '';
-  //   position: absolute;
-  //   width: 30%;
-  //   height: 30%;
-  //   border-radius: 50%;
-  //   left: 30%;
-  //   top: 50%;
-  //   transform: translate(0%, -50%);
-  //   background-color: var(--color-theme-secondary);
-  // }
-  &__inner {
-    position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  justify-content: center;
+  h3 {
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    color: #3b3a3a;
+  }
+  h2 {
+    font-weight: bold;
+    font-size: 2.5rem;
+    line-height: 1.3;
+    margin-top: 1rem;
+    text-align: center;
+  }
+  &__slider {
+    margin-top: 2rem;
+    max-width: 70rem;
     width: 100%;
-    height: 100%;
-    z-index: 1;
-    backdrop-filter: var(--filter-blur);
+    height: 35rem;
+    margin-top: 4rem;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    border-radius: 0.5rem;
+    position: relative;
     display: flex;
     justify-content: center;
-    &__content {
-      width: 90%;
-      height: 100%;
-      display: flex;
-      &__detail {
-        flex: 1;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        text-transform: uppercase;
-        gap: 0.5rem;
-        h1 {
-          font-size: 3.5rem;
-          text-align: center;
-          span {
-            background: -webkit-linear-gradient(var(--color-primary), var(--color-secondary));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            -webkit-text-stroke: 0.1rem var(--color-white);
-          }
-        }
-        p {
-          letter-spacing: 0.2rem;
-          text-align: center;
-        }
-        button {
-          margin-top: 2rem;
-          background-color: #007aff;
-          font-weight: bold;
-          color: #fff;
-          cursor: pointer;
-          padding: 0.8rem 3rem;
-          border-radius: 6rem;
-          box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-        }
-      }
-      &__image {
-        flex: 1;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        position: relative;
-        &__frame {
-          width: 30rem;
-          height: 30rem;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          position: relative;
-          &__avatar {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            border-radius: 5rem;
-            transform: rotate(25deg);
-          }
-          &__icon {
-            position: absolute;
-            width: 130%;
-            animation: move 10s infinite;
-          }
-        }
-      }
+    align-items: center;
+    &::before {
+      content: 'Kéo hình';
+      position: absolute;
+      z-index: 10;
+      right: 0;
+      top: 0;
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 0.4rem 2rem;
+      border-radius: 0 0 0 0.5rem;
+      font-weight: bold;
     }
-  }
-}
-
-@keyframes move {
-  0% {
-    transform: translateY(-10%);
-  }
-  50% {
-    transform: translateY(10%);
-  }
-  100% {
-    transform: translateY(-10%);
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      position: absolute;
+    }
   }
 }
 
 @media screen and (max-width: 768px) {
   .wrapper__banner {
-    &__inner {
-      &__content {
-        flex-direction: column-reverse;
-        &__detail {
-          h1 {
-            font-size: 2rem;
-          }
-        }
-        &__image {
-          align-items: flex-end;
-          &__frame {
-            width: 15rem;
-            height: 15rem;
-          }
-        }
-      }
+    h3 {
+      font-size: 0.8rem;
+      margin-top: 2rem;
+    }
+    h2 {
+      font-size: 1.8rem;
+    }
+    &__slider {
+      height: 25rem;
     }
   }
 }

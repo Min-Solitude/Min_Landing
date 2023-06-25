@@ -7,21 +7,44 @@
     flex-direction: column;
     align-items: center;
     gap: 2rem;
-    h1 {
-      text-transform: uppercase;
-      font-size: 2.5rem;
+    &__title {
       text-align: center;
-      span {
-        background: -webkit-linear-gradient(var(--color-primary), var(--color-secondary));
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
+      h1 {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+      }
+      p {
+        max-width: 30rem;
+        font-size: 0.9rem;
+        color: silver;
       }
     }
     &__content {
       width: 100%;
+      margin-top: 2rem;
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
-      gap: 2rem;
+      grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
+      gap: 4rem;
+      align-items: center;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .wrapper__language {
+    &__inner {
+      width: 80%;
+      &__title {
+        h1 {
+          font-size: 2rem;
+        }
+        p {
+          max-width: 20rem;
+        }
+      }
+      &__content {
+        gap: 2rem;
+      }
     }
   }
 }

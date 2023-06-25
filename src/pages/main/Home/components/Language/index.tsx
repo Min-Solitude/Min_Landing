@@ -41,9 +41,13 @@ const Language = () => {
   return (
     <View className={cx('wrapper__language')}>
       <View className={cx('wrapper__language__inner')}>
-        <h1 className={cx('wrapper__language__inner__title')}>
-          Chúng tôi <span>sử dụng</span>
-        </h1>
+        <div className={cx('wrapper__language__inner__title')}>
+          <h1>Chúng tôi sử dụng.</h1>
+          <p>
+            Dưới đây sẽ là một vài công nghệ chính mà chúng tôi sẽ sử dụng trong những dịch vụ mà chúng tôi cung cấp cho
+            các bạn.
+          </p>
+        </div>
         <View className={cx('wrapper__language__inner__content')}>
           {dataLanguage.map((item) => (
             <ItemLanguage key={item.id} {...item} />

@@ -3,13 +3,16 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 1rem;
+  justify-content: center;
+  padding: 2rem;
+  background-color: #131419;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   gap: 1rem;
   &__image {
     width: 3rem;
     height: 3rem;
     border-radius: 0.5rem;
-    background-color: pink;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -27,5 +30,6 @@
     text-align: center;
     font-size: 0.9rem;
     color: #777;
+    max-width: 20rem;
   }
 }

@@ -13,7 +13,7 @@ interface ItemLanguageProps {
 
 const ItemLanguage = (data: ItemLanguageProps) => {
   return (
-    <View className={cx('wrapper__item-language')}>
+    <View className={cx('wrapper__item-language')} whileTap={{ scale: 0.9 }}>
       <View className={cx('wrapper__item-language__image')}>
         <img src={data.image} alt='min' />
       </View>

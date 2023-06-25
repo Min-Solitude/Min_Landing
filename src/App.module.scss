@@ -16,27 +16,37 @@ html {
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--color-white);
+  background: transparent;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(to bottom, var(--color-primary), var(--color-secondary));
-  border-radius: 10px;
+  background: #414141;
+  border-radius: 1rem;
 }
 
 body {
   font-family: 'Open Sans', sans-serif;
   font-size: 1rem;
+  background-color: #0b0b0f;
+  color: var(--color-white);
 }
 
 a {
-  color: var(--color-black);
+  color: var(--color-white);
 }
 
 input {
   font-size: 1rem;
   font-family: 'Open Sans', sans-serif;
   outline: none;
+}
+
+div {
+  font-family: 'Open Sans', sans-serif;
+}
+
+p {
+  font-family: 'Open Sans', sans-serif;
 }
 
 button {

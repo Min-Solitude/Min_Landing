@@ -6,19 +6,28 @@ import Banner from './components/Banner'
 import About from './components/About'
 import Service from './components/Service'
 import Technology from './components/Technology'
-import Company from './components/Company'
 import Language from './components/Language'
+import Section from '@/motion/Section'
 const cx = classNames.bind(styles)
 
 const Home = () => {
   return (
     <View className={cx('wrapper__home')}>
-      <Banner />
-      <About />
-      <Service />
-      <Technology />
-      <Language />
-      <Company />
+      <Section>
+        <Banner />
+      </Section>
+      <Section>
+        <About />
+      </Section>
+      <Section>
+        <Service />
+      </Section>
+      <Section>
+        <Technology />
+      </Section>
+      <Section>
+        <Language />
+      </Section>
     </View>
   )
 }

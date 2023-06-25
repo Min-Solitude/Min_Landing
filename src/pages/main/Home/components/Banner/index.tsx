@@ -1,35 +1,35 @@
 import classNames from 'classnames/bind'
-import { motion } from 'framer-motion'
+import { motion, Variants } from 'framer-motion'
 
 import styles from './Banner.module.scss'
 import { View } from '@/components/shared'
-import image from '@/assets'
 
 const cx = classNames.bind(styles)
 
 const Banner = () => {
   return (
-    <View className={cx('wrapper__banner')}>
-      <View className={cx('wrapper__banner__inner')}>
-        <View className={cx('wrapper__banner__inner__content')}>
-          <View className={cx('wrapper__banner__inner__content__detail')}>
-            <h1>
-              Welcome to <span>nev</span>
-            </h1>
-            <p>Web Developer & Content Creater</p>
-            <motion.button whileTap={{ scale: 0.9 }}>Dịch vụ</motion.button>
-          </View>
-          <View className={cx('wrapper__banner__inner__content__image')}>
-            <View className={cx('wrapper__banner__inner__content__image__frame')}>
-              <img
-                src='https://i.pinimg.com/736x/d6/dd/21/d6dd2187f2e90dd473a61a6e5394dea3.jpg'
-                alt='nev'
-                className={cx('wrapper__banner__inner__content__image__frame__avatar')}
-              />
-              <img src={image.banner} alt='nev' className={cx('wrapper__banner__inner__content__image__frame__icon')} />
-            </View>
-          </View>
-        </View>
+    <View className={cx('wrapper__banner')} id='home'>
+      <h3>Sẵn sàng ngay bây giờ!</h3>
+      <h2>
+        Trải nghiệm website <br /> dành cho những nhà thiết kế.
+      </h2>
+      <View className={cx('wrapper__banner__slider')}>
+        <motion.img src='https://cdnb.artstation.com/p/assets/images/images/021/865/735/4k/anato-finnstark-god-petit.jpg?1573228136' />
+        <motion.img
+          src='https://cdnb.artstation.com/p/assets/images/images/003/820/141/4k/dominik-mayer-cloud-machine.jpg?1477659427'
+          drag='x'
+          dragConstraints={{ left: -900, right: 900 }}
+        />
+        <motion.img
+          src='https://cdna.artstation.com/p/assets/images/images/024/588/852/4k/anato-finnstark-web-petit.jpg?1582898555'
+          drag='x'
+          dragConstraints={{ left: -950, right: 950 }}
+        />
+        <motion.img
+          src='https://cdnb.artstation.com/p/assets/images/images/004/416/851/4k/jason-scheier-monument-valley-study-2-js.jpg?1483571113'
+          drag='x'
+          dragConstraints={{ left: -1000, right: 1000 }}
+        />
       </View>
     </View>
   )
