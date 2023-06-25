@@ -24,7 +24,7 @@ function FrameImage({ id, description, title }: FrameImageProps) {
   return (
     <section className={cx('wrapper__frameImage')}>
       <div ref={ref} className={cx('wrapper__frameImage__image')}>
-        <img src={`/src/assets/imgs/tom0${id}.jpg`} alt='nevsolit' />
+        <img src={`./src/assets/imgs/tom0${id}.jpg`} alt='nevsolit' />
       </div>
       <motion.div className={cx('wrapper__frameImage__count')} style={{ y }}>
         <h3>{`${title}`}</h3>
