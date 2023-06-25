@@ -1,5 +1,5 @@
 import classNames from 'classnames/bind'
-import { motion, Variants } from 'framer-motion'
+import { motion } from 'framer-motion'
 
 import styles from './Banner.module.scss'
 import { View } from '@/components/shared'

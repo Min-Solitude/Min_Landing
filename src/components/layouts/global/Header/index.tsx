@@ -15,7 +15,7 @@ const Header = () => {
   const [isMobile, setIsMobile] = useState(false)
 
   const handleClick = (index: any) => {
-    setIsActiveList(isActiveList.map((item, i) => i === index))
+    setIsActiveList(isActiveList.map((i) => i === index))
   }
 
   useEffect(() => {
