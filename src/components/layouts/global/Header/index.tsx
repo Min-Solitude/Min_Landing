@@ -1,5 +1,4 @@
 import classNames from 'classnames/bind'
-import { useState } from 'react'
 import { motion } from 'framer-motion'
 
 import style from './Header.module.scss'

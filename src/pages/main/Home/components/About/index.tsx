@@ -1,7 +1,6 @@
 import classNames from 'classnames/bind'
 import styles from './About.module.scss'
 import { View } from '@/components/shared'
-import { useScroll, useSpring, motion } from 'framer-motion'
 import FrameImage from '@/motion/FrameImage'
 
 const cx = classNames.bind(styles)
@@ -35,12 +34,6 @@ const cards = [
 ]
 
 const About = () => {
-  const { scrollYProgress } = useScroll()
-  const scaleX = useSpring(scrollYProgress, {
-    stiffness: 100,
-    damping: 30,
-    restDelta: 0.001
-  })
   return (
     <View className={cx('wrapper__about')} id='about'>
       <View className={cx('wrapper__about__title')}>
