@@ -14,13 +14,18 @@ const Service = () => {
 
   return (
     <View className={cx('wrapper__service')} id='service'>
-      <div className={cx('wrapper__service__title')}>
+      <View
+        className={cx('wrapper__service__title')}
+        initial={{ opacity: 0, y: 100 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1, delay: 0.5 }}
+      >
         <h1>Dịch vụ.</h1>
         <p>
-          Đây là những dịch vụ chúng tôi sẽ cung cấp cho bạn. Hãy xem qua nó và sử dụng. Dịch vụ của chúng tôi là hoàn
-          toàn Free.
+          Đây là những dịch vụ chúng tôi sẽ cung cấp cho bạn. <br /> Hãy xem qua nó và sử dụng. Dịch vụ của chúng tôi là
+          hoàn toàn Free.
         </p>
-      </div>
+      </View>
       <View className={cx('wrapper__service__box')}>
         <View className={cx('wrapper__service__box__window')}>
           <nav className={cx('wrapper__service__box__window__nav')}>

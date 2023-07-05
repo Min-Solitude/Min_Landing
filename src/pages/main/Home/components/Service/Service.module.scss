@@ -1,22 +1,21 @@
 .wrapper__service {
   min-height: 100vh;
   &__title {
-    text-align: center;
-    max-width: 30rem;
-    margin: auto;
-    margin-bottom: 4rem;
+    margin: 2rem 0;
     h1 {
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
+      font-size: 2rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      margin-bottom: 0.5rem;
     }
     p {
-      max-width: 30rem;
-      font-size: 0.9rem;
-      color: silver;
+      color: #3b3a3a;
     }
+    text-align: center;
   }
   &__box {
     padding: 1rem;
+    margin-top: 6rem;
     &__window {
       &__nav {
         &__ul {
@@ -82,6 +81,37 @@
             p {
               font-size: 0.9rem;
               color: #b1b1b1;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .wrapper__service {
+    &__box {
+      &__window {
+        &__nav {
+          &__ul {
+            &__li {
+              padding: 1rem 1.5rem;
+            }
+          }
+        }
+        &__main {
+          &__content {
+            &__div {
+              height: 30rem;
+            }
+            &__text {
+              bottom: -1rem;
+              transform: translate(0%, 100%);
+
+              p {
+                font-size: 0.8rem;
+              }
             }
           }
         }

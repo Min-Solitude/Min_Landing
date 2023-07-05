@@ -43,17 +43,16 @@ const About = () => {
   })
   return (
     <View className={cx('wrapper__about')} id='about'>
-      <h1 className={cx('wrapper__about__title')}>
-        <span>Đắm mình.</span>
+      <View className={cx('wrapper__about__title')}>
+        <h1>Đắm mình.</h1>
         <p>
-          Các trang tài sản của chúng tôi không chỉ đẹp. Tìm hiểu sâu hơn về tài chính, tin tức, ước tính, v.v. từ mọi
-          nơi trong ứng dụng.
+          Các trang tài sản của chúng tôi không chỉ đẹp. <br /> Tìm hiểu sâu hơn về tài chính, tin tức, ước tính, v.v.
+          từ mọi nơi trong ứng dụng.
         </p>
-      </h1>
+      </View>
       {cards.map((item, index) => (
         <FrameImage id={item.id} key={index} description={item.description} title={item.title} />
       ))}
-      <motion.div className='wrapper__about__progress' style={{ scaleX }} />
     </View>
   )
 }

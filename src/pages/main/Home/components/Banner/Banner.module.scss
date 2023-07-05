@@ -3,7 +3,94 @@
   flex-direction: column;
   align-items: center;
   min-height: 100vh;
-  justify-content: center;
+  &__title {
+    margin: 2rem 0;
+    h1 {
+      font-size: 2rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      margin-bottom: 0.5rem;
+    }
+    p {
+      color: #3b3a3a;
+    }
+    text-align: center;
+    &__button {
+      margin-top: 2rem;
+      display: flex;
+      gap: 2rem;
+      justify-content: center;
+      button {
+        font-size: 1rem;
+        font-weight: bold;
+        padding: 0.5rem 4rem;
+        border-radius: 6rem;
+        background-color: #303030;
+        color: #fff;
+        transition: 0.25s;
+        &:last-child {
+          background-color: transparent;
+          border: 0.1rem solid #303030;
+        }
+      }
+    }
+  }
+  &__image {
+    width: 100%;
+    height: 40rem;
+    position: relative;
+    &__first {
+      position: absolute;
+      top: 50%;
+      width: 100%;
+      left: 0;
+      // transform: translate(-30%, -50%);
+      max-width: 30rem;
+      height: 20rem;
+      border-radius: 0.5rem;
+      overflow: hidden;
+      box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.5);
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    &__second {
+      position: absolute;
+      top: 50%;
+      width: 100%;
+      left: 50%;
+      // transform: translate(-50%, -50%);
+      max-width: 60rem;
+      height: 35rem;
+      border-radius: 0.5rem;
+      overflow: hidden;
+      z-index: 5;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    &__third {
+      position: absolute;
+      top: 50%;
+      width: 100%;
+      left: 100%;
+      // transform: translate(-70%, -50%);
+      max-width: 30rem;
+      height: 20rem;
+      border-radius: 0.5rem;
+      overflow: hidden;
+      box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.5);
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
   h3 {
     text-transform: uppercase;
     font-size: 0.9rem;
@@ -16,50 +103,54 @@
     margin-top: 1rem;
     text-align: center;
   }
-  &__slider {
-    margin-top: 2rem;
-    max-width: 70rem;
-    width: 100%;
-    height: 35rem;
-    margin-top: 4rem;
-    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
-    overflow: hidden;
-    border-radius: 0.5rem;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    &::before {
-      content: 'Kéo hình';
-      position: absolute;
-      z-index: 10;
-      right: 0;
-      top: 0;
-      background-color: rgba(0, 0, 0, 0.5);
-      padding: 0.4rem 2rem;
-      border-radius: 0 0 0 0.5rem;
-      font-weight: bold;
-    }
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      position: absolute;
+}
+
+@media screen and (max-width: 1440px) {
+  .wrapper__banner {
+    &__image {
+      &__first {
+        max-width: 20rem;
+        height: 15rem;
+      }
+      &__second {
+        max-width: 40rem;
+        height: 25rem;
+      }
+      &__third {
+        max-width: 20rem;
+        height: 15rem;
+      }
     }
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   .wrapper__banner {
-    h3 {
-      font-size: 0.8rem;
-      margin-top: 2rem;
+    margin: 0;
+    padding: 0 1rem;
+    &__title {
+      h1 {
+        font-size: 1.5rem;
+      }
+      p {
+        text-align: center;
+        max-width: 18rem;
+        margin: auto;
+      }
     }
-    h2 {
-      font-size: 1.8rem;
-    }
-    &__slider {
-      height: 25rem;
+    &__image {
+      margin: 1rem 0;
+
+      &__first {
+        display: none;
+      }
+      &__second {
+        max-width: 30rem;
+        height: 20rem;
+      }
+      &__third {
+        display: none;
+      }
     }
   }
 }

@@ -1,6 +1,6 @@
 export const images = [
-  'https://cdna.artstation.com/p/assets/images/images/036/303/326/4k/sylvain-sarrailh-kikichihiro-rooftop.jpg?1652282942',
-  'https://cdnb.artstation.com/p/assets/images/images/061/251/725/large/sylvain-sarrailh-calvinhobbes-umeshu-lovers-garden.jpg?1680348144',
-  'https://cdna.artstation.com/p/assets/images/images/016/959/458/large/sylvain-sarrailh-dragonballtournamentartstation.jpg?1554133829',
-  'https://cdna.artstation.com/p/assets/images/images/025/417/180/large/sylvain-sarrailh-yoshifalaises.jpg?1585732244'
+  'https://pipe.com/assets/img/hero-trade-capital-25.svg',
+  'https://apps.umbrel.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fbanner-1.9c8e516f.jpg&w=3840&q=75',
+  'https://apps.umbrel.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fbanner-2.a31b4e44.jpg&w=3840&q=75',
+  'https://apps.umbrel.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fbanner-3.65afd10a.jpg&w=3840&q=75'
 ]

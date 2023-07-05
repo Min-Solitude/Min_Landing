@@ -12,8 +12,8 @@ const Technology = () => {
       <div className={cx('wrapper__teachnology__title')}>
         <h1>Sự phát triển mới.</h1>
         <p>
-          Hệ thống cung cấp dịch vụ Nev là một dịch vụ hoàn toàn mới tại thị trường Việt Nam. Đây là dịch vụ sẽ lớn mạnh
-          trong tương lai, chắc vậy.
+          Hệ thống cung cấp dịch vụ Nev là một dịch vụ hoàn toàn mới tại thị trường Việt Nam. <br /> Đây là dịch vụ sẽ
+          lớn mạnh trong tương lai, chắc vậy.
         </p>
       </div>
       <div className={cx('wrapper__teachnology__content')}>

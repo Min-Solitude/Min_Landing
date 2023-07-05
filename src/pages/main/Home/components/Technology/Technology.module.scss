@@ -5,16 +5,17 @@
   align-items: center;
   gap: 4rem;
   &__title {
-    text-align: center;
+    margin: 2rem 0;
     h1 {
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
+      font-size: 2rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      margin-bottom: 0.5rem;
     }
     p {
-      max-width: 30rem;
-      font-size: 0.9rem;
-      color: silver;
+      color: #3b3a3a;
     }
+    text-align: center;
   }
   &__content {
     width: 100%;
@@ -25,6 +26,7 @@
   .wrapper__teachnology {
     gap: 2rem;
     justify-content: center;
+    padding: 0 1rem;
     &__title {
       h1 {
         font-size: 2rem;
